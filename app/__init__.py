@@ -23,9 +23,6 @@ app.config.from_object(Config)
 db.init_app(app)
 Migrate(app, db)
 
-@app.route("/")
-def hello():
-	return {"message":"Hello World"},200
 
 
 # Need this to actually post data 
@@ -39,3 +36,7 @@ def inject_csrf_token(response):
             'FLASK_ENV') == 'production' else None,
         httponly=True)
     return response
+
+@app.route("/")
+def hello():
+	return {"message":"Hello World"},200

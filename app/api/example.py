@@ -7,15 +7,17 @@
 # #---------- GET ROUTES ----------
 # @<Route Name>.route("/")
 # def get_all_<Model Name>s(): 
+#     <Model Name> = <Model Name>.query.all()
+
 #     return {"data": response, "message":"Success"},200
 
 
 # @<Route Name>.route("/<int:id>")
 # def get_single_<Model Name>(id):
-#     <Model Name>s = <Model Name>.query.get(id)
-#     if <Model Name>s is None:
+#     <Model Name> = <Model Name>.query.get(id)
+#     if <Model Name> is None:
 #         return {"error": "<Model Name> Not Found"},404
-#     response = <Model Name>s.to_dict()
+#     response = <Model Name> .to_dict()
     
 #     return {"data": response, "message":"Success"},200
     
